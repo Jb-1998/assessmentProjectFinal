@@ -1,3 +1,4 @@
 # assessmentProjectFinal
 
-A website for assessment
+A website landing page for Fine
+
