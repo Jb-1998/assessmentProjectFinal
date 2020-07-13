@@ -15,6 +15,7 @@ body {
 nav {
   float: right;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .header-nav li {
@@ -53,13 +54,14 @@ nav {
 .intro-title {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  padding-right: 2rem;
+  padding-right: 7rem;
   padding-left: 0em;
+  z-index: -1;
 }
 .stay-style {
-  width: 25rem;
+  width: 20rem;
   font-weight: 800;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .span-style {
   width: 250px;
@@ -67,12 +69,15 @@ nav {
   background-color: #785ed8;
 }
 
+.separator-container {
+  padding: 0 5rem;
+}
 .separator {
   display: flex;
   align-items: center;
   text-align: center;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-top: -3rem;
   color: #785ed8;
 }
@@ -127,6 +132,20 @@ nav {
 .chatbot-description {
   grid-area: description;
   padding-left: 3rem;
+  z-index: -1;
+}
+
+[data-scroll] {
+  transition: all 1s;
+}
+
+[data-scroll="in"] {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-scroll="out"] {
+  transform: translateX(-200px);
+  opacity: 0;
 }
 
 .separator-feature {
@@ -157,12 +176,12 @@ nav {
 }
 
 .features .card-style {
-  width: 20rem;
-  height: 22rem;
+  width: 16rem;
+  height: 14rem;
   background-color: #474747;
   justify-content: center;
   text-align: center;
-  padding-top: 4rem;
+  padding-top: 2rem;
   font-size: 1.4rem;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -171,10 +190,14 @@ nav {
 }
 .card-style p {
   color: #a5a5a5;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   padding-left: 3rem;
   padding-right: 3rem;
   min-height: 2rem;
+}
+
+.card-style h3 {
+  font-size: 1.1rem;
 }
 
 .features-description {
@@ -200,7 +223,7 @@ nav {
 }
 
 .separator-technologies::after {
-  margin-left: 5rem;
+  margin-left: 2rem;
 }
 
 .technology-styles {
@@ -233,13 +256,13 @@ nav {
 }
 .join-description-style h2 {
   width: 20rem;
-  font-size: 3rem;
+  font-size: 2rem;
   margin-top: -2rem;
 }
 
 .join-description-style p {
-  font-size: 1.5rem;
-  width: 35rem;
+  font-size: 1.2rem;
+  width: 25rem;
 }
 
 .btn-container {
@@ -250,7 +273,7 @@ nav {
   border-width: 1px;
   border-style: solid;
   color: white;
-  width: 16rem;
+  width: 12.3rem;
   display: flex;
   justify-content: center;
   margin-right: 1rem;
@@ -258,7 +281,7 @@ nav {
 }
 
 .store-btn-style p {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 
 footer {
@@ -346,12 +369,14 @@ footer ul li {
 }
 
 .logo-style {
-  width: 31rem;
-  height: 18rem;
+  width: 21.3rem;
+  height: 12.5rem;
 }
 .phone-style {
-  width: 33rem;
-  height: 40rem;
+  width: 24.5rem;
+  height: 30rem;
+  padding-left: 2rem;
+  z-index: -1;
 }
 
 .img-join-style {
@@ -368,4 +393,22 @@ span {
 span.fade {
   opacity: 1;
   transform: translateY(0px);
+}
+.container {
+  padding: 16px;
+  margin-top: -4rem;
+}
+
+.sticky {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #121212;
+  padding-left: 12.5rem;
+  box-shadow: 6px 1px 1px rgb(47, 47, 47);
+}
+
+.sticky + .container {
+  padding-top: 60px;
 }
